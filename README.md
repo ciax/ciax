@@ -12,10 +12,26 @@
  ## utils
   This is a collection of BASH scripts to improve the development environment. Various management tools are also included. It is not necessarily required for CIAX-XML, but it is useful to have.
  ## cfg.*
- These are managed in the "utils" configuration file and are separated by disclosure range. For private information, please prepare your own repository with a name such as "cfg.private".
+ These are managed in the "utils" configuration file and are separated by disclosure range. For private information, please prepare your own repository with a name such as "cfg.priv".
  ## etc.
   - drivers
    The old version of CIAX codes written in Perl. 
+# How to install?
+ It is recommended that you install "utils". If you already have a familiar environment, CIAX-XML will work without it.
+ > Note: The software is designed to set up the environment in a way that minimizes the need to modify existing configuration files. All executable scripts are linked under "~/bin" in the home directory, and additions to the PATH environment variable are kept to a minimum. If you want to make a new script executable, you must first "register" the file.
+ ## Shell Utilities (utils)
+  You download config file first. It includes a setup script file to be invoked.
+  ```
+  $ git clone https://github.com/ciax/cfg.naoj.git
+  $ ~/cfg.naoj/setup
+  ```
+  This script will download a more public configuration repository and invoke "setup" in it. This is a chain of events that will eventually install "utils" for you. If you can use "sudo" as an administrator, the necessary applications will be automatically recognized and installed.
+ ## CIAX-XML (Distributred Control System)
+  Just do as follows and run "setup".
+  ```
+  $ git clone https://github.com/ciax/ciax-xml.git
+  $ ~/ciax-xml/utils/setup-ciax.sh
+  ```
 <!---
 ciax/ciax is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
